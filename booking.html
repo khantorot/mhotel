@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="khan" />
+    <link rel="shortcut icon" type="image/png" href="./content/icons/shortcut.png">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/booking.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+    <div class="section_title booking_title">
+        <a href="./index.html" class="back_btn"><span></span></a>
+        <h2>Ваш номер</h2>
+        <div class="title_links">
+            <a href="rooms.html">выбрать другой</a>
+        </div>
+    </div>
+    <form action="#" method="post">
+        <div class="selectRoom"></div>
+        <div class="toBook">
+            <a href="#" class="contact_btn"></a>
+            <div class="checkIn">
+                <p>Въезд<span></span></p>
+                <img src="./content/icons/arrow.png" alt="arrow" class="arrow">
+                <input type="text" id="depart" autocomplete="off">
+            </div>
+            <div class="checkOut">
+                <p>Выезд<span></span></p>
+                <img src="./content/icons/arrow.png" alt="arrow" class="arrow">
+                <input type="text" id="return" autocomplete="off">
+            </div>
+            <div class="adult">
+                <p>Взрослых</p>
+                <div class="minusAdult">-</div>
+                <input type="text" class="adultCount">
+                <div class="plusAdult">+</div>
+            </div>
+            <div class="child">
+                <p>Детей</p>
+                <div class="minusChild">-</div>
+                <input type="text" class="childCount">
+                <div class="plusChild">+</div>
+            </div>
+        </div>
+        <div class="form_input">
+            <input type="text" placeholder="Имя Фамилия" required>
+            <input type="tel" placeholder="Номер телефона" required>
+            <button id="sentBtn" class="toBookBtn">Бронировать</button>
+        </div>
+    </form>
+    <footer>
+		<ul>
+			<li><a href="">Касымалы Баялинова 172</a></li>
+			<li><a href="">+90 (212) 393 27 00</a></li>
+			<li><a href="">+90 (212) 393 27 00</a></li>
+			<li><a href="">info@khantoro.com</a></li>
+		</ul>
+		<ul>
+			<li><a href="./index.html">Главная</a></li>
+			<li><a href="./rooms.html">Номера</a></li>
+			<li><a href="./booking.html">Бронировать</a></li>
+			<li><a href="./outdoor.html">Галерея</a></li>
+		</ul>
+		<div class="social_media">
+			<a href="#">In</a>
+			<a href="#">Fb</a>
+			<a href="#">Tw</a>
+			<a href="#">Wh</a>
+		</div>
+		<p class="caption">© 2019 kismod studio</p>
+	</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script type="text/javascript" src="./assets/js/data.js"></script>
+    <script type="text/javascript" src="./assets/js/booking.js" defer></script>
+</body>
+
+</html>

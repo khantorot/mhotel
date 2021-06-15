@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/in_out_door.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+	<title>JS-cloudimage-360-view home addition</title>
+</head>
+
+<body>
+	<div class="section_title gallery_title">
+		<a href="./index.html" class="back_btn"><span></span></a>
+		<h2>Галерея</h2>
+		<div class="title_links">
+			<a href="./indoor.html">внутри</a>
+			<a href="./outdoor.html">снаружи</a>
+		</div>
+	</div>
+	<!-- simply iniatialize it with class name "cloudimage-360", server folder path, file name and amount of images -->
+	<div id="spinner" class="spinner-grow text-dark" role="status"></div>
+
+	<div id="main" class="wrapper" style="visibility: hidden;overflow: hidden;">
+
+		<div>
+			<div class="cloudimage-360" data-folder="https://cdn.scaleflex.it/demo/outdoor/"
+				data-filename="00_Haus_000{index}.jpg" data-amount="30" data-magnifier="3" data-responsive="scaleflex"
+				data-ratio="0.5" data-stop-at-edges data-spin-reverse data-control-reverse>
+			</div>
+		</div>
+	</div>
+
+	<div class="toBook">
+        <a href="#" class="contact_btn"></a>
+        <div class="checkIn">
+            <p>Въезд<span></span></p>
+            <img src="./content/icons/arrow.png" alt="arrow" class="arrow">
+            <input type="text" id="depart" autocomplete="off">
+        </div>
+        <div class="checkOut">
+            <p>Выезд<span></span></p>
+            <img src="./content/icons/arrow.png" alt="arrow" class="arrow">
+            <input type="text" id="return" autocomplete="off">
+        </div>
+        <div class="adult">
+            <p>Взрослых</p>
+            <div class="minusAdult">-</div>
+            <input type="text" class="adultCount">
+            <div class="plusAdult">+</div>
+        </div>
+        <div class="child">
+            <p>Детей</p>
+            <div class="minusChild">-</div>
+            <input type="text" class="childCount">
+            <div class="plusChild">+</div>
+        </div>
+        <a href="./booking.html" class="toBookBtn"></a>
+    </div>
+	
+	<footer>
+		<ul>
+			<li><a href="">Касымалы Баялинова 172</a></li>
+			<li><a href="">+90 (212) 393 27 00</a></li>
+			<li><a href="">+90 (212) 393 27 00</a></li>
+			<li><a href="">info@khantoro.com</a></li>
+		</ul>
+		<ul>
+			<li><a href="./index.html">Главная</a></li>
+			<li><a href="./rooms.html">Номера</a></li>
+			<li><a href="./booking.html">Бронировать</a></li>
+			<li><a href="./outdoor.html">Галерея</a></li>
+		</ul>
+		<div class="social_media">
+			<a href="#">In</a>
+			<a href="#">Fb</a>
+			<a href="#">Tw</a>
+			<a href="#">Wh</a>
+		</div>
+		<p class="caption">© 2019 kismod studio</p>
+	</footer>
+
+	<!-- Add script tag with CDN link to js-cloudimage-360-view lib after all content in body tag -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="./assets/js/script.js"></script>
+	<script src="./assets/js/in_out_door.js"></script>
+	<!--<script src="../../build/js-cloudimage-360-view.min.js"></script>-->
+	<script>
+		const spinner = document.getElementById('spinner');
+		const wrapper = document.getElementById('main');
+
+		wrapper.classList.add('active');
+		spinner.style.display = 'none';
+	</script>
+</body>
+
+</html>
