@@ -197,9 +197,7 @@
 		margin: 0;
 	}
 
-	.contact_btn{
-		left: 50%;
-		transform: translateX(-50%);
+	.toBook{
+		height: 250px;
 	}
-	
 }

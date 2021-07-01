@@ -416,6 +416,10 @@ header{
 
 
 @media screen and (max-width: 1100px){
+  header{
+    height: calc(100vh - 80px);
+    margin-top: 70px;
+  }
   
 	
 	.slick-dots{

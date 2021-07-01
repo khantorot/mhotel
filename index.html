@@ -11,8 +11,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/index.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link rel="stylesheet" href="./assets/css/jquery_ui.css">
 </head>
 
 <body>
@@ -54,7 +54,32 @@
 
     </header>
     <div class="toBook">
-        <a href="#" class="contact_btn"></a>
+        <div class="menu">
+            <label class="main-nav-open nav-toggle" for="main-nav-toggle" tabindex="0">
+                Menu
+            </label>
+            <input type="checkbox" id="main-nav-toggle" />
+            <nav class="main-nav">
+                <ul class="main-nav__fallback">
+                    <li>
+                        <a href="./index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="./rooms.html">Номера</a>
+                    </li>
+                    <li>
+                        <a href="./booking.html">Бронировать</a>
+                    </li>
+                    <li>
+                        <a href="./outdoor.html">Галерея</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Контакты</a>
+                    </li>
+    
+                </ul>
+            </nav>
+        </div>
         <div class="checkIn">
             <p>Въезд<span></span></p>
             <img src="./content/icons/arrow.png" alt="arrow" class="arrow">
@@ -169,10 +194,11 @@
         <p class="caption">© 2019 kismod studio</p>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery_ui.js"></script>
+    <script src="./assets/js/slick_min.js"></script>
+    <script src="./assets/js/jquery_mousewheel_min.js"></script>
+    <script src="./assets/js/pixi.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>

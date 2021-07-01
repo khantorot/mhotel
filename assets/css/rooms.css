@@ -112,6 +112,10 @@
 
 
 @media screen and (max-width: 1100px){
+
+	.toBook{
+		margin-top: 70px;
+	}
 	
 	.room{
 		width: 100%;

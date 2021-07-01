@@ -11,12 +11,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/rooms.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="./assets/css/jquery_ui.css">
 </head>
 
 <body>
     <div class="toBook">
-        <a href="#" class="contact_btn"></a>
+        <div class="menu">
+            <label class="main-nav-open nav-toggle" for="main-nav-toggle" tabindex="0">
+                Menu
+            </label>
+            <input type="checkbox" id="main-nav-toggle" />
+            <nav class="main-nav">
+                <ul class="main-nav__fallback">
+                    <li>
+                        <a href="./index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="./rooms.html">Номера</a>
+                    </li>
+                    <li>
+                        <a href="./booking.html">Бронировать</a>
+                    </li>
+                    <li>
+                        <a href="./outdoor.html">Галерея</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Контакты</a>
+                    </li>
+    
+                </ul>
+            </nav>
+        </div>
         <div class="checkIn">
             <p>Въезд<span></span></p>
             <img src="./content/icons/arrow.png" alt="arrow" class="arrow">
@@ -74,11 +99,12 @@
         </div>
         <p class="caption">© 2019 kismod studio</p>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="./assets/js/data.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery_ui.js"></script>
+    <script src="./assets/js/pixi.min.js"></script>
+    <script src="./assets/js/data.js"></script>
     <script src="./assets/js/script.js"></script>
-    <script type="text/javascript" src="./assets/js/rooms.js" defer></script>
+    <script src="./assets/js/rooms.js" defer></script>
 </body>
 
 </html>

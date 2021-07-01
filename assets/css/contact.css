@@ -1,0 +1,35 @@
+.contact_boxes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding:10px;
+    min-height: 52vh;
+}
+
+.contact_box{
+    margin-right: 150px;
+}
+
+.contact_box h4{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.contact_box a{
+    font-size: 20px;
+}
+
+.contact_box a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1100px){
+    .contact_boxes{
+        min-height: 0;
+    }
+    .contact_box{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
