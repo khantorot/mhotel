@@ -3,17 +3,11 @@ header{
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: #000;
-  border: 10px solid #fff;
+  border: 10px solid var(--bg);
   border-bottom: 0;
 }
 
 
-
-
-
-
-  
 .slider {
   position: relative;
   width: 100%;
@@ -27,6 +21,7 @@ header{
 }
 
 .slider__item {
+  position: relative;
   width: 100%;
   height: 100%;
   outline: none;
@@ -35,50 +30,8 @@ header{
 
 
 
-
 .slick-dots{
-  position: absolute;
-  bottom: 170px;
-  right: 40px;
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-}
-
-.slick-dots li{
-  margin-top: 10px;
-}
-
-
-.slick-dots li button{
-  outline: none;
-  border: 1px solid #fff;
-  border-radius: 20px;
-  font-size: 0;
-  background: none;
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.slick-dots li button:before{
-    background: none;
-    height: 100%;
-    width: 100%;
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 20px;
-    transition:  all ease 0.4s;
-    transform: scale(0);
-    background: #fff;
-  }
-
-.slick-dots li.slick-active button:before{
-  transform: scale(1);
+  display: none!important;
 }
 
 
@@ -87,105 +40,75 @@ header{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 500px;
   height: 100%;
-  color: #fff;
+  color: var(--text);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-left: 40px;
-  background: linear-gradient(45deg, black, transparent)
+  background: linear-gradient(90deg, #fff, transparent);
 }
 
 .textBlock h2{
-  width: 10ch;
-  overflow: hidden;
-  font-size: 7vw;
-  font-weight: 900;
-  white-space: nowrap;
-  border-right: 1vw solid #18249f;
+  font-size: 50px;
+  margin: 10px 0;
+  transform: translateX(-30px);
   opacity: 0;
-}
-
-.slider__item:nth-child(2) .textBlock h2{
-  width: 5ch;
-}
-.slider__item:nth-child(3) .textBlock h2{
-  width: 7ch;
-}
-.slider__item:nth-child(4) .textBlock h2{
-  width: 7ch;
+  transition: ease 0.3s;
+  -webkit-text-stroke: 2px;
+	-webkit-text-stroke-color: #000;
+	-webkit-text-fill-color: transparent;
 }
 
 .slick-active .textBlock h2{
-    animation: printed-text .5s steps(13),
-             flashin-border 1s step-start infinite;
-    opacity: 1;
-}
-
-@keyframes flashin-border{
-  0%{
-    border-color: #fff;
-  }
-  50%{
-    border-color: transparent;
-  }
-  100%{
-    border-color: #fff;
-  }
-}
-
-@keyframes printed-text{
-  from {
-    width: 0%;
-  }
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .textBlock p{
-  letter-spacing: 1px;
-  font-size: 1.7vw;
   text-transform: uppercase;
-  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 700;
+  width: 400px;
+  transform: translateX(30px);
   opacity: 0;
-  width: 50%;
+  transition: ease 0.3s;
 }
+
+
 .slick-active .textBlock p{
-  animation: showTextBlock_p 0.5s forwards;
-  animation-delay: 1s;
+  transition-delay: 0.3s;
+  opacity: 1;
+  transform: translateX(0);
 }
-@keyframes showTextBlock_p{
-  0%{ opacity: 0;
-      transform : translateX(50px) }
-  100%{
-      opacity: 1;
-      transform:  translateX(0);
-  }
-}
+
+
+
+
+
 .textBlock a{
   display: inline-block;
   position: relative;
   margin-top: 20px;
-  color: #fff;
+  color: var(--text);
   text-transform: uppercase;
-  letter-spacing: 2px;
-  border: 4px solid #fff;
-  font-weight: 900;
-  font-size: 16px;
-  padding: 15px 50px;
-  opacity: 0;
-  transition: all ease 0.3s;
+  letter-spacing: 1px;
+  border: 2px solid var(--text);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 15px 40px;
   outline: none;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: ease 0.3s;
 }
+
 .slick-active .textBlock a{
-  animation: showTextBlock_a 0.5s forwards;
-  animation-delay: 0.5s;
-}
-@keyframes showTextBlock_a{
-  0%{ opacity: 0;
-      transform: translateY(50px); }
-  100%{ opacity: 1;
-        transform: translateY(0);}
+  transition-delay: 0.6s;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .textBlock a:after,
@@ -193,11 +116,11 @@ header{
   content: '';
   position: absolute;
   width: 0;
-  height: 4px;
-  background: #000;
+  height: 2px;
+  background: var(--text);
   transition: all ease 0.3s;
   left: 0;
-  top: calc(50% - 2px);
+  top: calc(50% - 1px);
 }
 
 .textBlock a:before{
@@ -209,33 +132,20 @@ header{
   width: 25px;
 }
 .textBlock a:hover{
-  background: #fff;
-  color: #000;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .bgImg{
+  border: 2px solid red;
   position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   width: 100%;
-  opacity: 0.7;
-  transition: ease-out 1s;
+  transition: opacity ease-out 0.6s;
+  z-index: -1;
 }
-
-.slick-active .bgImg{
-  animation: bgImgScale 8s forwards;
-}
-@keyframes bgImgScale{
-  0%{ transform: scale(1) translateX(-50%); }
-  50%{ transform: scale(1.06) translateX(-50%); }
-  100%{ transform: scale(1) translateX(-50%); }
-}
-
-
-
-
-
-
 
 
 
@@ -245,134 +155,129 @@ header{
 
 .rooms{
     position: relative;
-    height: 750px; 
   	padding: 10px;
-}
-  
-.rooms a{
-    position: relative; 
+    height: 1240px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow:  hidden; 
-    float: left;
-    background: #000;
+    flex-wrap: wrap;
+}
+
+.room{
+  position: relative;
+  overflow: hidden;
 }
   
-.rooms a:nth-child(1){
-    width: 40%;  
-    height: 750px;  
-}
-
-.rooms a:nth-child(2){
-    width: calc(60% - 10px); 
-    margin-left: 10px; 
-    height: calc(50% - 10px);    
-}
-  
-.rooms a:nth-child(3),
-.rooms a:nth-child(4){
-    margin-left: 10px;  
-    margin-top: 10px;  
-    height: calc(50% + 10px);
-    width:  calc(30% - 10px);  
-}
-  
-.rooms a img{
-    height: 100%;  
-    transform: scale(1.05);
-    transition: all ease 0.4s;
-    pointer-events: none;
-}
-  
-.rooms a:nth-child(2) img{
-    height: auto;
-    width: 100%;  
-}
-
-.rooms a:hover img{
-    opacity: 0.7;
-    transform:scale(1);
-}
-  
-.roomText{
-    position: absolute;
-    color: #fff;
-	height: 100%;
-	width: 100%;
-    pointer-events: none;
-	z-index: 1;
-	background: linear-gradient(90deg, black, transparent);
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	padding: 40px;
+.room:nth-child(4n + 1){
+    height: 600px;
+    width: 30%;
 }
 
 
-
-.roomText h4{
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 33px;
-	transition: all ease 0.3s;
+.room:nth-child(4n + 1) img{
+  width: auto;
+  height: 100%;
+}
+.room:nth-child(4n + 2){
+  position: relative;
+  left: 10px;
+  width: calc(70% - 10px);
+  height: 340px;
+}
+.room:nth-child(4n + 2) img{
+  width: 100%;
+}
+.room:nth-child(4n + 3){
+  position: absolute;
+  width: calc(35% - 20px);
+  height: 250px;
+  top: 360px;
+  right: 10px;
+}
+.room:nth-child(4n + 3) img{
+  width: 100%;
+}
+.room:nth-child(4n + 4){
+  position: absolute;
+  width: calc(35% - 15px);
+  height: 250px;
+  top: 360px;
+  right: 35%;
+}
+.room:nth-child(4n + 4) img{
+  width: 100%;
 }
 
-.rooms a:hover .roomText h4{
-    transform: translateY(-20px);
+.room:nth-child(7),
+.room:nth-child(8){
+  top: 970px;
 }
-
-
-.roomText p{
-    letter-spacing: 1px;
-    font-size: 13px;
-    text-transform: uppercase;
-    margin: 5px 0px 30px 0px;
-}
-  
-.roomText span{
-	display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 13px;
-	font-weight: 700;
-    position: relative;
-    border: 2px solid #fff;
-    padding: 10px 40px;
-	z-index: 10;
-	transition: ease-out 0.3s;
-}
-
-.roomText span:after,
-.roomText span:before{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: 3px;
-    width: 0px;
-    background: #000;
-    transition: all ease 0.3s;
-}
-  
-.roomText span:after{
-    left: auto;
-    right: 0;
-  
-}
-  
-.rooms a:hover span:after,
-.rooms a:hover span:before{
-    width: 25px;
-}
-
-.rooms a:hover span{
-	color: #000;
-	background: #fff;
+.room img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: ease-out 0.6s;
 }
 
 
+.room .roomText{
+  background: linear-gradient(90deg, #fff, transparent);
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.room .roomText h4{
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.room .roomText p{
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.room .roomText a{
+  display: inline-block;
+  position: relative;
+  margin-top: 20px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid var(--text);
+  font-weight: 700;
+  font-size: 10px;
+  padding: 10px 20px;
+  transition: ease-out 0.3s;
+}
+
+.room .roomText a:after,
+.room .roomText a:before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--text);
+  transition: all ease 0.3s;
+  left: 0;
+  top: calc(50% - 1px);
+}
+
+.room .roomText a:before{
+  left: auto;
+  right: 0;
+}
+.room .roomText a:hover:after,
+.room .roomText a:hover:before{
+  width: 10px;
+}
+.room .roomText a:hover{
+  background: var(--bg);
+  color: var(--text);
+}
 
 
 
@@ -389,11 +294,6 @@ header{
 	position: relative;
 }
 
-.gallery a h4{
-	margin-top: 5px;
-	font-size: 18px;
-}
-
 .gallery a .img_box{
 	display: flex;
 	align-items: flex-start;
@@ -401,12 +301,13 @@ header{
 	overflow: hidden;
 }
 
+
 .gallery a .img_box img{
 	width: 100%;
 	transition: ease-out 0.3s;
 }
 
-.gallery a .img_box:hover img{
+.gallery a:hover img{
 	transform: scale(1.1);
 }
 
@@ -417,115 +318,81 @@ header{
 
 @media screen and (max-width: 1100px){
   header{
-    height: calc(100vh - 80px);
-    margin-top: 70px;
+    height: 100vh;
+  }
+  .textBlock{
+    width: 100%;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    background: linear-gradient(0deg, #fff, transparent);
   }
   
-	
-	.slick-dots{
-		position: absolute;
-		top: 10px;
-		left: 50%;
-		transform:translateX(-50%);
-		flex-direction: row;
-		height: 30px;
-		width: 120px;
-	}
-	
-	.slick-dots li{
-		margin-top: 0;
-		margin-right: 20px;
-	}
-	
-	
-	.textBlock{
-		padding: 10px;
-		background: linear-gradient(90deg, black, transparent);
-	}
-	
-	.textBlock h2{
-		font-size: 35px;
-		font-weight: 700;
-	}
-
-	.textBlock p{
-		letter-spacing: 1px;
-		font-size: 13px;
-		text-transform: uppercase;
-		margin: 10px 0px;
-		opacity: 0;
-		width: 80%;
-	}
-
-	.textBlock a{
-		border: 2px solid #fff;
-		font-weight: 700;
-		font-size: 15px;
-		padding: 15px 30px;
-	}
-
-	
-	.textBlock a:hover:after,
-	.textBlock a:hover:before{
-		width: 15px;
-	}
-	
-	.bgImg{
-		width: auto;
-		height: 100%;
-	}
-
-
-
-  	
-	.rooms{
-		position: relative;
-		height: auto; 
-		padding: 10px;
-	}
-  
-	.rooms a{
-		margin: 0 0 10px 0!important;
-		width: 100%!important;
-		height: 70vw!important;
-	}
+  .textBlock h2{
+    font-size: 40px;
+  }
 
   
-	.rooms a img{
-		width: auto!important;
-		height: 100%;  
-		transform: scale(1);
-		transition: all ease 0.4s;
-		pointer-events: none;
-		opacity: 0.8;
-	}
+  .textBlock p{
+    width: 100%;
+    font-size: 14px;
+  }
   
-	.roomText{
-		padding: 20px;
-	}
-
-
-
-	.roomText h4{
-		font-size: 30px;
-	}
-
-
-	.roomText p{
-		font-size: 14px;
-		margin: 20px 0px 30px 0px;
-	}
+  .bgImg{
+    width: auto;
+    height: 100%;
+  }
   
-	.roomText span{
-		font-size: 13px;
-		font-weight: 400;
-		padding: 10px 20px;
-	}
+  
 
-	.rooms a:hover span:after,
-	.rooms a:hover span:before{
-		width: 15px;
-	}
+  .rooms{
+    position: relative;
+  	padding: 10px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+  .room{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  
+  .room:nth-child(n){
+      position: static;
+      height: auto;
+      width: 100%;
+  }
+
+  .room:nth-child(n) img{
+    width: 100%;
+    height: auto;
+  }
+
+  .room img{
+    position: static;
+    transform: translate(0,0);
+  }
+
+
+  .room .roomText{
+    background: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .room .roomText h4{
+    font-size: 22px;
+  }
+
+  .room .roomText p{
+    font-size: 14px;
+  }
+
+  .room .roomText a{
+    font-size: 14px;
+  }
+  
 
 
 	.gallery a{

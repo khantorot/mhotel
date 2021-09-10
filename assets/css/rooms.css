@@ -60,6 +60,7 @@
 }
 .info_box ul{
 	font-size: 14px;
+	font-weight: 700;
 	list-style: none;
 	position: relative;	
 }
@@ -74,10 +75,10 @@
 .info_box a{
 	display: inline-block;
 	position: relative;
-	color: #000;
-	border: 3px solid #000;
+	color: var(--text);
+	border: 2px solid var(--text);
 	padding: 10px 30px;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 700;
 	margin-top: 30px;
 	transition: all ease 0.3s;
@@ -88,9 +89,9 @@
 	content: '';
 	left: 0;
 	top: 50%;
-	width: 5px;
-	height: 3px;
-	background: #000;
+	width: 0px;
+	height: 2px;
+	background: var(--text);
 	transition: all ease 0.3s;
 }
 .info_box a:after{
@@ -98,12 +99,10 @@
 	right: 0;
 }
 .info_box a:hover{
-  background: #000;
-  color: #fff;
+  background: var(--bg);
 }
 .info_box a:hover:after,
 .info_box a:hover:before{
-	background: #fff;
 	width: 20px;
 }
 

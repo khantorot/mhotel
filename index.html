@@ -4,60 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="khan" />
+    <meta name="description" content="Empirebay Hotel Chain" />
+    <meta name="keywords" content="hotels, apartaments, villas" />
+    <meta name="author" content="khantorot" />
     <link rel="shortcut icon" type="image/png" href="./content/icons/shortcut.png">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>Главная | Empirebay</title>
     <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/jquery_ui.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
 <body>
+    <div class="preloader">
+        <img src="./content/images/preloader.png" alt="preloader">
+    </div>
     <header>
-        <div class=slider>
-            <article class=slider__item>
-                <img src="./content/images/banner-1_m.jpg" alt="bgimg" class="bgImg">
-                <div class="textBlock">
-                    <h2>Junior Suite</h2>
-                    <p>Номера улучшенной планировки категории полулюкс</p>
-                    <a href="./rooms.html">Подробнее</a>
-                </div>
-            </article>
-            <article class=slider__item>
-                <img src="./content/images/banner-3_m.jpg" alt="bgimg" class="bgImg">
-                <div class="textBlock"> 
-                    <h2>Suite</h2>
-                    <p>Номера улучшенной планировки, категория люкс</p>
-                    <a href="./rooms.html">Подробнее</a>
-                </div>
-            </article>
-            <article class=slider__item>
-                <img src="./content/images/banner-4_m.jpg" alt="bgimg" class="bgImg">
-                <div class="textBlock">
-                    <h2>De Luxe</h2>
-                    <p>Номера повышенной комфортности</p>
-                    <a href="./rooms.html">Подробнее</a>
-                </div>
-            </article>
-            <article class=slider__item>
-                <img src="./content/images/istanbul-banner-6_m.jpg" alt="bgimg" class="bgImg">
-                <div class="textBlock">
-                    <h2>Duplex</h2>
-                    <p>Двухуровневые номера – дуплексы </p>
-                    <a href="./rooms.html">Подробнее</a>
-                </div>
-            </article>
-        </div>
-
+        <div class=slider></div>
     </header>
     <div class="toBook">
         <div class="menu">
-            <label class="main-nav-open nav-toggle" for="main-nav-toggle" tabindex="0">
-                Menu
-            </label>
+            <label class="main-nav-open nav-toggle" for="main-nav-toggle" tabindex="0"></label>
             <input type="checkbox" id="main-nav-toggle" />
             <nav class="main-nav">
                 <ul class="main-nav__fallback">
@@ -76,7 +43,7 @@
                     <li>
                         <a href="./contact.html">Контакты</a>
                     </li>
-    
+
                 </ul>
             </nav>
         </div>
@@ -104,8 +71,6 @@
         </div>
         <a href="./booking.html" class="toBookBtn"></a>
     </div>
-
-
     <section>
         <div class="section_title rooms_title">
             <h2>Наши номера</h2>
@@ -113,40 +78,7 @@
                 <a href="./rooms.html">Все номера</a>
             </div>
         </div>
-        <div class="rooms">
-            <a href="./booking.html" data-id="5">
-                <img src="./content/images/banner-1_m.jpg" alt="roomImg">
-                <div class="roomText">
-                    <h4>Family Room</h4>
-                    <p>Семейные номера </p>
-                    <span>Бронировать</span>
-                </div>
-            </a>
-            <a href="./booking.html" data-id="6">
-                <img src="./content/images/banner-3_m.jpg" alt="roomImg">
-                <div class="roomText">
-                    <h4>Studio</h4>
-                    <p>Студия c мини-кухней</p>
-                    <span>Бронировать</span>
-                </div>
-            </a>
-            <a href="./booking.html" data-id="7">
-                <img src="./content/images/banner-4_m.jpg" alt="roomImg">
-                <div class="roomText">
-                    <h4>Standart</h4>
-                    <p>Стандартные однокомнатные</p>
-                    <span>Бронировать</span>
-                </div>
-            </a>
-            <a href="./booking.html" data-id="8">
-                <img src="./content/images/istanbul-banner-6_m.jpg" alt="roomImg">
-                <div class="roomText">
-                    <h4>Apartament</h4>
-                    <p>Отдельные апартаменты</p>
-                    <span>Бронировать</span>
-                </div>
-            </a>
-        </div>
+        <div class="rooms"></div>
     </section>
     <section>
         <div class="section_title gallery_title">
@@ -159,24 +91,22 @@
         <div class="gallery">
             <a href="./indoor.html">
                 <div class="img_box">
-                    <img src="./content/images/banner-1_m.jpg" alt="banner">
+                    <img src="./content/images/indoor/30.jpeg" alt="banner">
                 </div>
-                <h4>Посмотрите наши апартаменты внутри</h4>
             </a>
             <a href="./outdoor.html">
                 <div class="img_box">
-                    <img src="./content/images/banner-3_m.jpg" alt="banner">
+                    <img src="./content/images/outdoor/30.jpg" alt="banner">
                 </div>
-                <h4>Посмотрите наши апартаменты снаружи</h4>
             </a>
         </div>
     </section>
 
     <footer>
         <ul>
-            <li><a href="">Касымалы Баялинова 172</a></li>
-            <li><a href="">+90 (212) 393 27 00</a></li>
-            <li><a href="">+90 (212) 393 27 00</a></li>
+            <li><a href="https://2gis.com/" target="_blank">Касымалы Баялинова 172</a></li>
+            <li><a href="tel:+902123932700">+90 (212) 393 27 00</a></li>
+            <li><a href="tel:+902123932700">+90 (212) 393 27 00</a></li>
             <li><a href="">info@khantoro.com</a></li>
         </ul>
         <ul>
@@ -186,12 +116,12 @@
             <li><a href="./outdoor.html">Галерея</a></li>
         </ul>
         <div class="social_media">
-            <a href="#">In</a>
-            <a href="#">Fb</a>
-            <a href="#">Tw</a>
-            <a href="#">Wh</a>
+            <a href="https://www.instagram.com/" target="_blank">In</a>
+            <a href="https://www.facebook.com/" target="_blank">Fb</a>
+            <a href="https://twitter.com/" target="_blank">Tw</a>
+            <a href="https://wa.me/968700132131" target="_blank">Wh</a>
         </div>
-        <p class="caption">© 2019 kismod studio</p>
+        <p class="caption">© 2019 developed by <a href="https://khantorot.github.io/bloo/" target="_blank">Bloo</a></p>
     </footer>
 
     <script src="./assets/js/jquery.min.js"></script>
@@ -199,6 +129,7 @@
     <script src="./assets/js/slick_min.js"></script>
     <script src="./assets/js/jquery_mousewheel_min.js"></script>
     <script src="./assets/js/pixi.min.js"></script>
+    <script src="./assets/js/data.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>

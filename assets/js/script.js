@@ -79,8 +79,8 @@ class Navigation {
     
     // Bind the various listener methods to their appropriate listeners
     window.addEventListener('pointermove', this.onPointerMove);
-    window.addEventListener('pointerdown', this.onPointerDown);
-    window.addEventListener('pointerup', this.onPointerUp);
+    // window.addEventListener('pointerdown', this.onPointerDown);
+    // window.addEventListener('pointerup', this.onPointerUp);
     window.addEventListener('resize', this.onResize);
   }
   
@@ -143,7 +143,7 @@ class Navigation {
     const ctx = c.getContext('2d');
 
     const font = 'Montserrat';
-    const fontSize = 80;
+    const fontSize = 70;
 
     ctx.font = `${fontSize}px ${font}`; // This is here purely to run the measurements
 
@@ -259,8 +259,8 @@ class Navigation {
    */
   deInit() {
     window.removeEventListener('pointermove', this.onPointerMove);
-    window.removeEventListener('pointerdown', this.onPointerDown);
-    window.removeEventListener('pointerup', this.onPointerUp);
+    // window.removeEventListener('pointerdown', this.onPointerDown);
+    // window.removeEventListener('pointerup', this.onPointerUp);
     window.removeEventListener('resize', this.onResize);
   }
 
@@ -579,6 +579,22 @@ document.querySelector('.toBook').addEventListener('click', function (e) {
   localStorage.setItem('childCount', childCount);
   showPeopleCount()
 });
+
+
+
+
+
+
+
+
+
+
+window.onload = function () {
+  setTimeout(function(){
+    document.querySelector('.preloader').classList.add('preloader_hide');
+  }, 1000)
+}
+
 
 
 

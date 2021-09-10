@@ -8,8 +8,13 @@
 }
 
 .img_box{
-	width: calc(50% - 105px);
+	width: 50%;
+	max-height: 350px;
 	margin-right: 10px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .img_box img{
@@ -17,9 +22,9 @@
 }
 
 .text_box{
-	width: calc(50% - 105px);
+	width: calc(50% - 10px);
 	padding: 30px;
-	border: 1px solid #aaaaaa;
+	border: 1px solid var(--gray);
 }
 
 
@@ -107,7 +112,9 @@
 }
 
 
-
+.checkIn{
+	padding-left: 0px;
+}
 
 .form_input{
 	height: 70px;
@@ -119,7 +126,7 @@
 
 .form_input input{
 	height: 100%;
-	width: calc(50% - 105px);
+	width: calc(50% - 100px);
 	margin-right: 10px;
 	padding-left: 10px;
 	font-weight: 700;
